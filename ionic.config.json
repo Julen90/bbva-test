@@ -1,0 +1,7 @@
+{
+  "name": "bbva-test",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
