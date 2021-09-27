@@ -1,4 +1,7 @@
+import { AuthenticationService } from './../../core/services/authetication.service';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,8 +10,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  public loginForm: FormGroup;
 
-  ngOnInit() {}
+  constructor(
+    private  router:  Router,
+    private authService: AuthenticationService
+  ) { }
+
+  ngOnInit() {
+    this.initializeForm();
+  }
+
+  login(){
+    if( this.loginForm.valid ) {
+      this.authService.login(this.loginForm.value).subscribe((res: boolean)=>{
+        console.log( res );
+        if ( res ) {
+          this.router.navigateByUrl('counter');
+        }
+      });
+    }
+  }
+
+  initializeForm(): void {
+    this.loginForm = new FormGroup({
+      user: new FormControl(''),
+      password: new FormControl('')
+    });
+  }
 
 }

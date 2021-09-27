@@ -1,0 +1,22 @@
+[
+  {
+      "user": "Julen",
+      "password": "12345",
+      "lastLog": null
+  },
+  {
+      "user": "Alex",
+      "password": "12345",
+      "lastLog": null
+  },
+  {
+      "user": "Iban",
+      "password": "12345",
+      "lastLog": null
+  },
+  {
+      "user": "Jon",
+      "password": "12345",
+      "lastLog": null
+  }
+]

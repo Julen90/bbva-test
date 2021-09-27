@@ -1,10 +1,18 @@
+import { CounterComponent } from './pages/counter/counter.component';
+import { AuthGuard } from './core/guards/auth/auth.guard';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
   {
     path: 'login',
-    loadChildren: () => import('./pages/login/login.component').then( m => m.LoginComponent)
+    component: LoginComponent
+  },
+  {
+    path: 'counter',
+    component: CounterComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: '',

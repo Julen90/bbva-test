@@ -1,0 +1,49 @@
+<ion-content padding>
+  <ion-card>
+    <ion-card-header class="ion-text-center">
+      <ion-card-title>Welcome!</ion-card-title>
+      <ion-card-subtitle>The last time you accessed was</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-row>
+        <ion-col class="ion-text-center">
+          <div class="time-digits">
+            {{ days | number : '2.0' }}
+          </div>
+          <div class="time-names">
+            days
+          </div>
+        </ion-col>
+        <ion-col class="ion-text-center">
+          <div class="time-digits">
+            {{ hours | number : '2.0' }}
+          </div>
+          <div class="time-names">
+            hours
+          </div>
+        </ion-col>
+        <ion-col class="ion-text-center">
+          <div class="time-digits">
+            {{ minutes | number : '2.0' }}
+          </div>
+          <div class="time-names">
+            minutes
+          </div>
+        </ion-col>
+        <ion-col class="ion-text-center">
+          <div class="time-digits">
+            {{ seconds | number : '2.0' }}
+          </div>
+          <div class="time-names">
+            seconds
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+  <ion-row>
+    <ion-col size="12" class="ion-text-center">
+      <ion-button type="button" (click)="logOut()">Logout</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>
