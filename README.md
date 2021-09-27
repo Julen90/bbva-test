@@ -7,5 +7,5 @@ This app permits to log with different users and watch when was the last time si
 * Angular: 12
 ## Setup
 To run this project, install it locally using npm:
-$ npm install
-$ ionic serve
+* npm install
+* ionic serve
